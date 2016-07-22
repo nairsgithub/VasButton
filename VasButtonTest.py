@@ -24,14 +24,6 @@ def PiUpdate(pin,state):
     GPIO.output(pin,state)
     
 
-"""def piOFF(pin,state):        
-    import RPi.GPIO as GPIO
-    GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(pin,GPIO.OUT)
-    GPIO.output(pin,False)
-    #print "OFF",pin,state;"""
-
 def Change(MYUSR,MYPASS,LastChange):
     try : 
         r=requests.post(url, data={'USERNAME' : MYUSR,'PASSWORD' : MYPASS, 'CHANGE' :'CHANGE'})
