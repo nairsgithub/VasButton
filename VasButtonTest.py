@@ -6,7 +6,7 @@ import time
 import json
 
 #META DATA
-url="http://vastauine.com/RND/API/VASAPI.php"
+url="http://vastauine.com/VASAPI.php"
 
 #START MESSAGE
 MYUSR='YOUR-VASTAUINE-ID'
@@ -63,12 +63,14 @@ while True:
  
     if (var[0] == False):        
         Update(MYUSR,MYPASS)
-        print("Updated at : ",datetime.datetime.now().time())
+        #print("Updated at : ",datetime.datetime.now().time())
     elif (var[0] == True):
-        time.sleep(1)
+        time.sleep(0.5)
         #print("Rechecking")        
     elif (var[0] == 'CHANGE#ERR'):
-        print('CHANGE ERROR')
+        #print('CHANGE ERROR')
+        time.sleep(0.5)
     else :
-        print("UNKNOWN ERROR")
+        #print("UNKNOWN ERROR")
+        time.sleep(0.5)
 
