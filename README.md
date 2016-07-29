@@ -22,4 +22,51 @@ STEP 3 : Connecting your Pi to Wifi
         * make sure you have your Wifi name and Password change it in the below code
         ** Go to this path copy paste following code make sure you cange your wifi ID and password field
 
-Start Using VasButton a product by Vastauine .
+-------------------------------------------------------------------------------------
+sudo nano /etc/network/interfaces
+--------------------------------------------------------------------------------------
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet manual
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+auto wlan1
+allow-hotplug wlan1
+iface wlan1 inet manual
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+----------------------------------------------------------------------------
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+----------------------------------------------------------------------------
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+        ssid="WIFI-NAME"
+
+        psk="WIFI-PASS"
+
+        key_mgmt=WPA-PSK
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+reboot one using sudo reboot,make sure you are connected by doing ifconfig  if you are connected you can see a IP address in Wlan0
+
+STEP 4: Download and vasbutton.py file on to your raspberry pi,(say u put it in directory /home/pi)
+
+STEP 5: Set your PI to run vasbutton.py automatically every time you boot up!
+Run following Command: sudo nano .bashrc
+at the end of this file write command to run vasbutton.py : sudo python vasbutton.py
+
+Now Restart your PI !
+
+DONE !
+>> Your home is Connected
+
+
