@@ -23,37 +23,37 @@ STEP 3 : Connecting your Pi to Wifi
         ** Go to this path copy paste following code make sure you cange your wifi ID and password field
 
 -------------------------------------------------------------------------------------
-sudo nano /etc/network/interfaces
+>>sudo nano /etc/network/interfaces
 --------------------------------------------------------------------------------------
-auto lo
-iface lo inet loopback
-
-auto eth0
-allow-hotplug eth0
-iface eth0 inet manual
-
-auto wlan0
-allow-hotplug wlan0
-iface wlan0 inet manual
-wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-
-auto wlan1
-allow-hotplug wlan1
-iface wlan1 inet manual
-wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+         auto lo
+         iface lo inet loopback
+         
+         auto eth0
+         allow-hotplug eth0
+         iface eth0 inet manual
+         
+         auto wlan0
+         allow-hotplug wlan0
+         iface wlan0 inet manual
+         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+         
+         auto wlan1
+         allow-hotplug wlan1
+         iface wlan1 inet manual
+         wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ----------------------------------------------------------------------------
-sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+>>sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ----------------------------------------------------------------------------
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-        ssid="WIFI-NAME"
-
-        psk="WIFI-PASS"
-
-        key_mgmt=WPA-PSK
-}
+         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+         update_config=1
+         
+         network={
+                 ssid="WIFI-NAME"
+         
+                 psk="WIFI-PASS"
+         
+                 key_mgmt=WPA-PSK
+         }
 
 -----------------------------------------------------------------------------------------------------------------------------
 reboot one using sudo reboot,make sure you are connected by doing ifconfig  if you are connected you can see a IP address in Wlan0
