@@ -1,4 +1,7 @@
-# VasButtonBeta
+VasButton Version 1
+
+** Make Sure You Have Installed retrying and requests library installed if you dont have do pip install to install it
+
 VasButtonTest.py is Beta Raspberry Pi compaitable software to start using VasButton on http://vastauine.com/vasbutton
 Sign up for vastauine.com and then Download this file to your pi
 modify Username and password field
