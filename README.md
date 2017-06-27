@@ -1,4 +1,5 @@
-VasButton Version 1
+VasButton Version 1 (-- Older Version --)
+#This methord is not for Current Beta Test version if you are a new user this methord is obsolete use Vastauine Repository for new version.
 
 ** Make Sure You Have Installed retrying and requests library installed if you dont have do pip install to install it
 
